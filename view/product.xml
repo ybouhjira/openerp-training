@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<openerp>
+  <data>
+    
+    <!-- Menus -->
+    <menuitem name="Product" id="training_product_h3_menu" parent="training_h2_menu" action="action_training_product" />
+
+    <!-- Actions -->
+    <record model="ir.actions.act_window" id="action_training_product">
+      <field name="name">Products</field>
+      <field name="res_model">training.product</field>
+      <field name="view_mode">form</field>
+    </record>
+
+
+    <!-- Form View -->
+    <record model="ir.ui.view" id="training_product_form">
+      <field name="name">training.product.form</field>
+      <field name="model">training.product</field>
+      <field name="type">form</field>
+
+      <field name="arch" type="xml">
+        <form version="7.0" string="Hello">
+          <sheet>
+            <label string="Name" />
+            <field name="name" />
+
+            <label string="Price" />
+            <field name="price" />
+          </sheet>
+        </form>
+      </field>
+    
+    </record>
+  
+
+  </data>
+</openerp>

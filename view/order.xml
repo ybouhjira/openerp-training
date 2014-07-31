@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<openerp>
+  <data>
+    
+    <!-- Menu -->
+    <menuitem name="Training" id="training_h1_menu" sequence="0" />
+    <menuitem name="Training" id="training_h2_menu" sequence="0" parent="training_h1_menu" />
+    <menuitem name="Orders" id="training_order_h3_menu" sequence="0" parent="training_h2_menu" action="action_training_order"/>
+
+    <!-- Actions -->
+
+    <record model="ir.actions.act_window" id="action_training_order">
+      <field name="name">Orders</field>
+      <field name="res_model">training.order</field>
+      <field name="view_mode">form</field>
+    </record>
+
+
+    <!-- Form View -->
+    <record model="ir.ui.view" id="view_author_form">
+      <field name="name">training.order.form</field>
+      <field name="model">training.order</field>
+      <field name="type">form</field>
+
+      <field name="arch" type="xml">
+        <form version="7.0" string="Hello">
+          <sheet> 
+            <label string="Name" />
+            <field name="name" />
+
+            <label string="Date" />
+            <field name="date" />
+
+            <label string="Client" />
+            <field name="client" />
+          </sheet>
+        </form>
+      </field>
+    
+    </record>
+
+  </data>
+</openerp>

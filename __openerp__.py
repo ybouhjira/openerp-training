@@ -10,6 +10,10 @@
     #'images': ['images/internal_sequence_number.jpeg'],
     'depends': ['base'],
     #'data': [],
+    'update_xml' : [
+        "view/order.xml",
+        "view/product.xml"
+    ],
     #'demo': [],
     'installable': True,
     'auto_install': False,
