@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<openerp>
+  <data>
+
+    <!-- Form View -->
+    <record model="ir.ui.view" id="training_order_line_form">
+      <field name="name">training.order_line.form</field>
+      <field name="model">training.order_line</field>
+      <field name="type">form</field>
+
+      <field name="arch" type="xml">
+        <form version="7.0" string="Hello">
+          <sheet>
+            <label string="Name" />
+            <field name="name" />
+
+            <label string="Date" />
+            <field name="date" />
+
+            <label string="Client" />
+            <field name="product_id" />
+            
+            <label string="price" />
+            <field name="price" />
+          </sheet>
+        </form>
+      </field>
+    
+    </record>
+
+    <!-- Tree view -->
+    <record model="ir.ui.view" id="view_author_tree" >
+        <field name="name">training.order_line.tree</field>
+        <field name="model">training.order_line</field>
+        <field name="arch" type="xml">
+            <tree string="Order lines">  
+                <field name="name" />  
+                <field name="date"/>
+                <field name="product_id" />
+                <field name="price" />
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Actions -->
+    <record model="ir.actions.act_window" id="action_training_order_line">
+      <field name="name">Order lines</field>
+      <field name="res_model">training.order_line</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+     <!-- Menus -->
+    <menuitem name="Order lines" id="training_order_line_h3_menu" parent="training_h2_menu" action="action_training_order_line" />
+
+
+  </data>
+</openerp>

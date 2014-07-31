@@ -12,7 +12,8 @@
     #'data': [],
     'update_xml' : [
         "view/order.xml",
-        "view/product.xml"
+        "view/product.xml",
+        "view/order_line.xml"
     ],
     #'demo': [],
     'installable': True,
