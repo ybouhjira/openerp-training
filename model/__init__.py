@@ -26,8 +26,12 @@ class training_order_line(osv.osv):
 
   def _get_price(self, cr, uid, ids, field_name=None, arg=None, context={}):
     res = {}
-    for id in ids:
-      res[id] = 10
+    obj = self.browse(cr, uid, ids)
+
+    for o in obj:
+      print o.product_id.price * o.quantity
+      res[o.id] = o.product_id.price * o.quantity
+
     return res
 
   _name    = 'training.order_line'
@@ -35,7 +39,8 @@ class training_order_line(osv.osv):
     'name' : fields.char('Name', size=30, required=True),
     'date' : fields.date('Date'),
     'product_id' : fields.many2one('training.product','Product'),
-    'price' : fields.function(_get_price, string='Price', type='float') 
+    'price' : fields.function(_get_price, string='Price', type='float'),
+    'quantity' : fields.integer('Quantity'),
   }
 
 

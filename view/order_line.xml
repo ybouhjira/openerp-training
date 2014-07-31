@@ -17,11 +17,14 @@
             <label string="Date" />
             <field name="date" />
 
-            <label string="Client" />
+            <label string="Product" />
             <field name="product_id" />
             
-            <label string="price" />
+            <label string="Price" />
             <field name="price" />
+
+            <label string="Quantity" />
+            <field name="quantity" />
           </sheet>
         </form>
       </field>
@@ -38,6 +41,7 @@
                 <field name="date"/>
                 <field name="product_id" />
                 <field name="price" />
+                <field name="quantity" />
             </tree>
         </field>
     </record>
