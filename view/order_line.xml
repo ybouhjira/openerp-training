@@ -18,13 +18,13 @@
             <field name="date" />
 
             <label string="Product" />
-            <field name="product_id" />
+            <field name="product_id" on_change="calculate_price(product_id, quantity)" />
             
             <label string="Price" />
             <field name="price" />
 
             <label string="Quantity" />
-            <field name="quantity" />
+            <field name="quantity" on_change="calculate_price(product_id, quantity)" />
           </sheet>
         </form>
       </field>

@@ -21,6 +21,7 @@ class training_product(osv.osv):
   }
 training_product()
 
+
 class training_order_line(osv.osv):
   """Order line class"""
 
@@ -33,6 +34,13 @@ class training_order_line(osv.osv):
       res[o.id] = o.product_id.price * o.quantity
 
     return res
+
+  def calculate_price(self, cr, uid, ids, product_id, quantity, context={}):
+    product_obj = self.pool.get('training.product')
+    product_dict = product_obj.read(cr,uid,[product_id],['price'])
+    
+    return {'value' : {'price' : product_dict[0]['price'] * quantity}}
+
 
   _name    = 'training.order_line'
   _columns = {
