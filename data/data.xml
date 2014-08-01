@@ -1,0 +1,56 @@
+<openerp>
+  <data>
+    
+    <record model="training.product" id="product1">
+      <field name="name">product01</field>
+      <field name="price">10</field>
+    </record>
+    
+    <record model="training.product" id="product2">
+      <field name="name">product02</field>
+      <field name="price">20</field>
+    </record>
+    
+    <record model="training.product" id="product3">
+      <field name="name">product03</field>
+      <field name="price">30</field>
+    </record>
+
+    <record model="training.product" id="product4">
+      <field name="name">product04</field>
+      <field name="price">40</field>
+    </record>
+
+
+    <!-- <record model="res.partner" id="partner1">
+      <field name="name">Youssef Bouhjira</field>
+    </record>
+
+    <record model="training.order" id="order1">
+      <field name="name">Order001</field>
+      <field name="date">2014-07-01</field>
+      <field name="client" ref="partner1" />
+    </record>
+
+    <record model="training.order.line" id="orderline1">
+      <field name="partner_id" ref="partner1" />
+      <field name="date">2014-07-01</field>
+      <field name="product_id" ref="product4" />
+      <field name="price">99.00</field>
+      <field name="quantity">9</field>
+      <field name="comment">ASSALAM alaykom, here goes a great comment</field>
+      <field name="order_id" ref="order1" />
+    </record>
+
+    <record model="training.order.line" id="orderline2">
+      <field name="partner_id" ref="partner1" />
+      <field name="date">2014-07-01</field>
+      <field name="product_id" ref="product4" />
+      <field name="price">88.00</field>
+      <field name="quantity">8</field>
+      <field name="comment">ASSALAM alaykom, here goes a great comment</field>
+      <field name="order_id" ref="order1" />
+    </record>
+ -->
+  </data>
+</openerp>

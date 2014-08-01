@@ -7,15 +7,13 @@
     """,
     'author': 'HoomamLabs',
     'website': 'http://Hoomamlabs.com',
-    #'images': ['images/internal_sequence_number.jpeg'],
     'depends': ['base'],
-    #'data': [],
+    'data': ['data/data.xml'],
     'update_xml' : [
-        "view/order.xml",
-        "view/product.xml",
-        "view/order_line.xml"
+        'view/order.xml',
+        'view/product.xml',
+        'view/order_line.xml'
     ],
-    #'demo': [],
     'installable': True,
     'auto_install': False,
 }

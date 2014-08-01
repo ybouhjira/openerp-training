@@ -12,7 +12,7 @@
     <record model="ir.actions.act_window" id="action_training_order">
       <field name="name">Orders</field>
       <field name="res_model">training.order</field>
-      <field name="view_mode">form</field>
+      <field name="view_mode">tree,form</field>
     </record>
 
 
@@ -38,6 +38,20 @@
       </field>
     
     </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="training_order_tree" >
+        <field name="name">training.order.tree</field>
+        <field name="model">training.order</field>
+        <field name="arch" type="xml">
+            <tree string="Products">  
+              <field name="name" />
+              <field name="date" />
+              <field name="client" />
+            </tree>
+        </field>
+    </record>
+
 
   </data>
 </openerp>
